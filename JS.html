@@ -1,0 +1,46 @@
+<html>
+<head>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+   function zmena() {
+    document.all.text.style.color="red";
+  }
+   function zmena2() {
+    document.all.text.style.color="black";
+   }
+   function klik(){
+    alert("asdsa");
+   }
+   
+var x = prompt("Zadejte èíslo mezi 10 a 20:","");
+  try{
+    if(x>20){
+      throw "ChybaMoc";
+    }
+    else if(x<10){
+      throw "ChybaMalo";
+    }
+  }
+  catch(chyba){
+    if(chyba == "ChybaMoc"){
+      alert("Vámi zadané èíslo je moc velké!");
+    }
+    if(chyba == "ChybaMalo"){
+      alert("Vámi zadané èíslo je moc malé!");
+    }
+  }
+
+
+
+</script>
+
+
+<span id="text">Text, který se po stisku tlaèítka zmìní.</span>
+<input type="button" onmouseover="zmena();" onmouseout="zmena2();" onclick="klik();" value="Zmìò barvu">
+<input type="button" value="Zobraz okno!" onClick="okenko()">
+</body>
+</html>
